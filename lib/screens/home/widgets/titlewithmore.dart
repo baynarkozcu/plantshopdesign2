@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappshop2/widgets/underlinetitle.dart';
+import 'package:flutterappshop2/screens/home/widgets/underlinetitle.dart';
+import '../../../constants.dart';
 
-import '../constants.dart';
 
 class TitleWidthMoreButton extends StatelessWidget {
   final String title;

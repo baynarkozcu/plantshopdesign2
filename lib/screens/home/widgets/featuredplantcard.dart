@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../../../constants.dart';
+
 
 class FeaturedPlantCard extends StatelessWidget {
   final String image;

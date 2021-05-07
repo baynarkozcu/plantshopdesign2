@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappshop2/widgets/featuredplants.dart';
-import 'package:flutterappshop2/widgets/headerwithsearch.dart';
-import 'package:flutterappshop2/widgets/recomendsplants.dart';
-import 'package:flutterappshop2/widgets/titlewithmore.dart';
+import 'package:flutterappshop2/screens/home/widgets/featuredplants.dart';
+import 'package:flutterappshop2/screens/home/widgets/headerwithsearch.dart';
+import 'package:flutterappshop2/screens/home/widgets/recomendsplants.dart';
+import 'package:flutterappshop2/screens/home/widgets/titlewithmore.dart';
 
 class HomeBody extends StatelessWidget {
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappshop2/widgets/custombuttomappbar.dart';
 
-import 'homebody.dart';
+import 'body.dart';
+import 'widgets/custombuttomappbar.dart';
 
 class Home extends StatelessWidget {
   @override

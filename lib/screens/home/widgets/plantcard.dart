@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../../../constants.dart';
+
 
 class PlantCard extends StatelessWidget {
   final String title, country, image;
@@ -14,20 +15,18 @@ class PlantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.only(
-          left: kDefaultPadding,
-          top: kDefaultPadding / 2,
-          bottom: kDefaultPadding * 0.25),
-      width: size.width * 0.4,
-      child: Column(
-        children: [
-          Image.asset(image),
-          GestureDetector(
-            onTap: () {
-              press();
-            },
-            child: Container(
+    return GestureDetector(
+      onTap: press,
+          child: Container(
+        margin: EdgeInsets.only(
+            left: kDefaultPadding,
+            top: kDefaultPadding / 2,
+            bottom: kDefaultPadding * 0.25),
+        width: size.width * 0.4,
+        child: Column(
+          children: [
+            Image.asset(image),
+            Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -58,9 +57,9 @@ class PlantCard extends StatelessWidget {
                           ))
                 ],
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
