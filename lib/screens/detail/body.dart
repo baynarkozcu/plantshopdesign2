@@ -1,59 +1,60 @@
 import 'package:flutter/material.dart';
 import 'package:flutterappshop2/constants.dart';
+import 'package:flutterappshop2/screens/detail/widgets/iconcard.dart';
+import 'package:flutterappshop2/screens/detail/widgets/titleandprice.dart';
+
+import 'widgets/imageandicons.dart';
 
 class DeailBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      children: [
-        SizedBox(
-          height: size.height * 0.8,
-          child: Row(
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ImageandIcons(),
+          TitleandPrice(
+            title: "Angelica",
+            country: "Russia",
+            price: 450,
+          ),
+          SizedBox(
+            height: kDefaultPadding,
+          ),
+          Row(
             children: [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      vertical: kDefaultPadding * 4,
-                      horizontal: kDefaultPadding),
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: InkWell(
-                            onTap: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Icon(Icons.keyboard_arrow_left_outlined)),
-                      ),
-                      Spacer()
-                    ],
+              SizedBox(
+                width: size.width / 2,
+                height: 85,
+                child: FlatButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.only(topRight: Radius.circular(25))),
+                  color: primaryColor,
+                  onPressed: () {},
+                  child: Text(
+                    "Buy Now",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
-              Container(
-                height: size.height * 0.8,
-                width: size.width * 0.75,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(63),
-                      bottomLeft: Radius.circular(63),
-                    ),
-                    image: DecorationImage(
-                        alignment: Alignment.centerLeft,
-                        fit: BoxFit.cover,
-                        image: AssetImage("assets/images/img.png")),
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 60,
-                          color: primaryColor.withOpacity(0.29))
-                    ]),
+              Expanded(
+                child: FlatButton(
+                  height: 85,
+                  onPressed: () {},
+                  child: Text("Description"),
+                ),
               )
             ],
           ),
-        )
-      ],
+          SizedBox(
+            height: kDefaultPadding * 2,
+          )
+        ],
+      ),
     );
   }
 }
