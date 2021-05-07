@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutterappshop2/widgets/custombuttomappbar.dart';
 
 import 'homebody.dart';
 
@@ -10,7 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: HomeBody(),
-      
+      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 
@@ -24,3 +23,5 @@ class Home extends StatelessWidget {
     );
   }
 }
+
+
